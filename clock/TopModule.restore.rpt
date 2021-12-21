@@ -1,6 +1,6 @@
 Restore Archived Project report for TopModule
-Mon Dec 06 23:29:29 2021
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
+Wed Jan 23 14:33:01 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -17,9 +17,9 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -29,15 +29,14 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+refer to the applicable agreement for further details.
 
 
 
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Mon Dec 06 23:29:29 2021 ;
+; Restore Archived Project Status ; Successful - Wed Jan 23 14:33:01 2019 ;
 ; Revision Name                   ; TopModule                             ;
 ; Top-level Entity Name           ; TopModule                             ;
 ; Family                          ; MAX 10                                ;
@@ -47,23 +46,21 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------+
 ; Restore Archived Project Messages ;
 +-----------------------------------+
-Info: Successfully restored 'C:/intelFPGA_lite/DE10_LITE/L11_Timer/L11_Timer_tmp_archive.qar' into the 'C:/intelFPGA_lite/L11_Timer' directory
+Info: Successfully restored 'C:/MyPrj/L00_Template/L00_Template_tmp_archive.qar' into the 'C:/MyPrj/L08_Chattering' directory
 Info: Generated report 'TopModule.restore.rpt'
 
 
-+-----------------------------------+
-; Files Restored                    ;
-+-----------------------------------+
-; File Name                         ;
-+-----------------------------------+
-; qar_info.json                     ;
-; L11_Timer.qpf                     ;
-; Timer.v                           ;
-; TopModule.qsf                     ;
-; TopModule.v                       ;
-; TopModule_assignment_defaults.qdf ;
-; assignment_defaults.qdf           ;
-+-----------------------------------+
++-------------------------+
+; Files Restored          ;
++-------------------------+
+; File Name               ;
++-------------------------+
+; qar_info.json           ;
+; L00_Template.qpf        ;
+; TopModule.qsf           ;
+; TopModule.v             ;
+; assignment_defaults.qdf ;
++-------------------------+
 
 
 +--------------------+

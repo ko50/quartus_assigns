@@ -17,9 +17,14 @@ module TopModule(
 	input 		     [9:0]		SW
 
 	);
-	wire [9:0] wsec;
-	m_timer(CLK1,wsec);
-	assign LED=wsec;
+
+	wire button;	//チャタリング除去後のスイッチデータ
+	wire [3:0] wq;	//10進カウンタの出力データ
+	wire clk;		//KEY0は、押された時に0になるので、カウンタ用に論理を反転
+	assign clk=~button;
+	m_chattering u0(CLK1,BTN[0],button);
+	m_dec_counter u1(clk,wq);
+	assign LED={6'h0,wq};
 	assign HEX0=8'hff;
 	assign HEX1=8'hff;
 	assign HEX2=8'hff;

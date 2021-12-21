@@ -1,9 +1,9 @@
 //1/5000000 PreScaler
 module m_prescale5M(input clk,output c_out);
-	reg [23:0] cnt;
+	reg [22:0] cnt;
 	wire wcout;
 	
-	assign wcout=(cnt==24'd09999999) ? 1'b1 : 1'b0;
+	assign wcout=(cnt==23'd4999999) ? 1'b1 : 1'b0;
 	assign c_out=wcout;
 	
 	always @(posedge clk) begin

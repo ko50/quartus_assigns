@@ -1,0 +1,7 @@
+{
+	"common_dir" : "C:/intelFPGA_lite/DE10_LITE/L11_Timer/",
+	"acds_version" : "Version 20.1.1 Patches 1.02i",
+	"platform" : "windows",
+	"os" : "Windows 10",
+	"qpf" : "L11_Timer.qpf"
+}

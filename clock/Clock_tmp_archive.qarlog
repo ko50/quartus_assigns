@@ -1,0 +1,22 @@
+Quartus Prime Archive log --	C:/MyPrj/L08_Chattering/L08_Chattering_tmp_archive.qarlog
+
+Archive:	C:/MyPrj/L08_Chattering/L08_Chattering_tmp_archive.qar
+Date:		Wed Feb 06 13:40:38 2019
+Quartus Prime		18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/MyPrj/L08_Chattering/Chattering.v
+C:/MyPrj/L08_Chattering/L08_Chattering.qpf
+C:/MyPrj/L08_Chattering/TopModule.qsf
+C:/MyPrj/L08_Chattering/TopModule.v
+C:/MyPrj/L08_Chattering/assignment_defaults.qdf
+	======= Total: 5 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Wed Feb 06 13:40:40 2019
+Source archive file:	C:/MyPrj/L08_Chattering/L08_Chattering_tmp_archive.qar
+Archive was extracted into	C:/MyPrj/TimingCheck/
+		 - successfully.

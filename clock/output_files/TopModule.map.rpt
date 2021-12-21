@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TopModule
-Wed Dec  8 10:26:54 2021
+Mon Dec 20 10:07:28 2021
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -14,9 +14,10 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "m_seven_segment:ss3"
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -43,15 +44,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Dec  8 10:26:54 2021       ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec 20 10:07:28 2021       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; TopModule                                   ;
 ; Top-level Entity Name              ; TopModule                                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 54                                          ;
-;     Total combinational functions  ; 54                                          ;
-;     Dedicated logic registers      ; 28                                          ;
-; Total registers                    ; 28                                          ;
+; Total logic elements               ; 26                                          ;
+;     Total combinational functions  ; 26                                          ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
 ; Total pins                         ; 72                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -157,65 +158,67 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                  ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                    ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------+---------+
-; TopModule.v                      ; yes             ; User Verilog HDL File  ; /guest/ダウンロード/L11_Timer/TopModule.v ;         ;
-; Timer.v                          ; yes             ; User Verilog HDL File  ; /guest/ダウンロード/L11_Timer/Timer.v     ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                              ;
++----------------------------------+-----------------+------------------------+---------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------+---------+
+; TopModule.v                      ; yes             ; User Verilog HDL File  ; /guest/quartus_assigns/Adder/TopModule.v    ;         ;
+; SevenSegment.v                   ; yes             ; User Verilog HDL File  ; /guest/quartus_assigns/Adder/SevenSegment.v ;         ;
+; m_adder.v                        ; yes             ; User Verilog HDL File  ; /guest/quartus_assigns/Adder/m_adder.v      ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------+---------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimated Total logic elements              ; 54         ;
-;                                             ;            ;
-; Total combinational functions               ; 54         ;
-; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 28         ;
-;     -- 3 input functions                    ; 1          ;
-;     -- <=2 input functions                  ; 25         ;
-;                                             ;            ;
-; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 31         ;
-;     -- arithmetic mode                      ; 23         ;
-;                                             ;            ;
-; Total registers                             ; 28         ;
-;     -- Dedicated logic registers            ; 28         ;
-;     -- I/O registers                        ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 72         ;
-;                                             ;            ;
-; Embedded Multiplier 9-bit elements          ; 0          ;
-;                                             ;            ;
-; Maximum fan-out node                        ; CLK1~input ;
-; Maximum fan-out                             ; 28         ;
-; Total fan-out                               ; 304        ;
-; Average fan-out                             ; 1.35       ;
-+---------------------------------------------+------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 26          ;
+;                                             ;             ;
+; Total combinational functions               ; 26          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 21          ;
+;     -- 3 input functions                    ; 4           ;
+;     -- <=2 input functions                  ; 1           ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 22          ;
+;     -- arithmetic mode                      ; 4           ;
+;                                             ;             ;
+; Total registers                             ; 0           ;
+;     -- Dedicated logic registers            ; 0           ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 72          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; SW[4]~input ;
+; Maximum fan-out                             ; 9           ;
+; Total fan-out                               ; 201         ;
+; Average fan-out                             ; 1.18        ;
++---------------------------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                  ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------+--------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                  ; Entity Name  ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------+--------------+--------------+
-; |TopModule                 ; 54 (0)              ; 28 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 72   ; 0            ; 0          ; |TopModule                           ; TopModule    ; work         ;
-;    |m_timer:t|             ; 54 (14)             ; 28 (4)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TopModule|m_timer:t                 ; m_timer      ; work         ;
-;       |m_prescale5M:u0|    ; 40 (40)             ; 24 (24)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TopModule|m_timer:t|m_prescale5M:u0 ; m_prescale5M ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------+--------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                               ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name            ; Entity Name     ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------+-----------------+--------------+
+; |TopModule                 ; 26 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 72   ; 0            ; 0          ; |TopModule                     ; TopModule       ; work         ;
+;    |m_adder:a1|            ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TopModule|m_adder:a1          ; m_adder         ; work         ;
+;    |m_seven_segment:ss1|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TopModule|m_seven_segment:ss1 ; m_seven_segment ; work         ;
+;    |m_seven_segment:ss2|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TopModule|m_seven_segment:ss2 ; m_seven_segment ; work         ;
+;    |m_seven_segment:ss4|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TopModule|m_seven_segment:ss4 ; m_seven_segment ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -224,14 +227,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 28    ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 3     ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "m_seven_segment:ss3" ;
++------------+-------+----------+-----------------+
+; Port       ; Type  ; Severity ; Details         ;
++------------+-------+----------+-----------------+
+; idat[3..1] ; Input ; Info     ; Stuck at GND    ;
++------------+-------+----------+-----------------+
 
 
 +-----------------------------------------------------+
@@ -240,20 +252,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 72                          ;
-; cycloneiii_ff         ; 28                          ;
-;     ENA               ; 3                           ;
-;     plain             ; 25                          ;
-; cycloneiii_lcell_comb ; 55                          ;
-;     arith             ; 23                          ;
-;         2 data inputs ; 23                          ;
-;     normal            ; 32                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 2                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 28                          ;
+; cycloneiii_lcell_comb ; 31                          ;
+;     arith             ; 4                           ;
+;         3 data inputs ; 4                           ;
+;     normal            ; 27                          ;
+;         0 data inputs ; 3                           ;
+;         1 data inputs ; 3                           ;
+;         4 data inputs ; 21                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.30                        ;
-; Average LUT depth     ; 3.05                        ;
+; Max LUT depth         ; 3.30                        ;
+; Average LUT depth     ; 2.11                        ;
 +-----------------------+-----------------------------+
 
 
@@ -272,94 +280,67 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Wed Dec  8 10:26:44 2021
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off L11_Timer -c TopModule
+    Info: Processing started: Mon Dec 20 10:07:18 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Adder -c TopModule
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file TopModule.v
-    Info (12023): Found entity 1: TopModule File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 1
-Info (12021): Found 2 design units, including 2 entities, in source file Timer.v
-    Info (12023): Found entity 1: m_prescale5M File: /guest/ダウンロード/L11_Timer/Timer.v Line: 2
-    Info (12023): Found entity 2: m_timer File: /guest/ダウンロード/L11_Timer/Timer.v Line: 18
+    Info (12023): Found entity 1: TopModule File: /guest/quartus_assigns/Adder/TopModule.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file SevenSegment.v
+    Info (12023): Found entity 1: m_seven_segment File: /guest/quartus_assigns/Adder/SevenSegment.v Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file Chattering.v
+    Info (12023): Found entity 1: m_chattering File: /guest/quartus_assigns/Adder/Chattering.v Line: 1
+    Info (12023): Found entity 2: m_counter File: /guest/quartus_assigns/Adder/Chattering.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file m_adder.v
+    Info (12023): Found entity 1: m_adder File: /guest/quartus_assigns/Adder/m_adder.v Line: 1
 Info (12127): Elaborating entity "TopModule" for the top level hierarchy
-Info (12128): Elaborating entity "m_timer" for hierarchy "m_timer:t" File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 22
-Warning (10230): Verilog HDL assignment warning at Timer.v(32): truncated value with size 32 to match size of target (4) File: /guest/ダウンロード/L11_Timer/Timer.v Line: 32
-Info (12128): Elaborating entity "m_prescale5M" for hierarchy "m_timer:t|m_prescale5M:u0" File: /guest/ダウンロード/L11_Timer/Timer.v Line: 24
-Warning (10230): Verilog HDL assignment warning at Timer.v(13): truncated value with size 32 to match size of target (24) File: /guest/ダウンロード/L11_Timer/Timer.v Line: 13
+Warning (10034): Output port "LED[9..8]" at TopModule.v(15) has no driver File: /guest/quartus_assigns/Adder/TopModule.v Line: 15
+Info (12128): Elaborating entity "m_adder" for hierarchy "m_adder:a1" File: /guest/quartus_assigns/Adder/TopModule.v Line: 27
+Info (12128): Elaborating entity "m_seven_segment" for hierarchy "m_seven_segment:ss1" File: /guest/quartus_assigns/Adder/TopModule.v Line: 34
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX0[0]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 6
-    Warning (13410): Pin "HEX0[1]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 6
-    Warning (13410): Pin "HEX0[2]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 6
-    Warning (13410): Pin "HEX0[3]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 6
-    Warning (13410): Pin "HEX0[4]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 6
-    Warning (13410): Pin "HEX0[5]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 6
-    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 6
-    Warning (13410): Pin "HEX0[7]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 6
-    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 7
-    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 7
-    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 7
-    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 7
-    Warning (13410): Pin "HEX1[4]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 7
-    Warning (13410): Pin "HEX1[5]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 7
-    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 7
-    Warning (13410): Pin "HEX1[7]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 7
-    Warning (13410): Pin "HEX2[0]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 8
-    Warning (13410): Pin "HEX2[1]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 8
-    Warning (13410): Pin "HEX2[2]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 8
-    Warning (13410): Pin "HEX2[3]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 8
-    Warning (13410): Pin "HEX2[4]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 8
-    Warning (13410): Pin "HEX2[5]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 8
-    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 8
-    Warning (13410): Pin "HEX2[7]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 8
-    Warning (13410): Pin "HEX3[0]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 9
-    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 9
-    Warning (13410): Pin "HEX3[2]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 9
-    Warning (13410): Pin "HEX3[3]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 9
-    Warning (13410): Pin "HEX3[4]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 9
-    Warning (13410): Pin "HEX3[5]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 9
-    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 9
-    Warning (13410): Pin "HEX3[7]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 9
-    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 10
-    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 10
-    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 10
-    Warning (13410): Pin "HEX4[3]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 10
-    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 10
-    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 10
-    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 10
-    Warning (13410): Pin "HEX4[7]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 10
-    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 11
-    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 11
-    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 11
-    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 11
-    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 11
-    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 11
-    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 11
-    Warning (13410): Pin "HEX5[7]" is stuck at VCC File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 11
+    Warning (13410): Pin "HEX0[7]" is stuck at VCC File: /guest/quartus_assigns/Adder/TopModule.v Line: 6
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: /guest/quartus_assigns/Adder/TopModule.v Line: 7
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: /guest/quartus_assigns/Adder/TopModule.v Line: 7
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: /guest/quartus_assigns/Adder/TopModule.v Line: 7
+    Warning (13410): Pin "HEX1[7]" is stuck at VCC File: /guest/quartus_assigns/Adder/TopModule.v Line: 7
+    Warning (13410): Pin "HEX2[7]" is stuck at VCC File: /guest/quartus_assigns/Adder/TopModule.v Line: 8
+    Warning (13410): Pin "HEX3[7]" is stuck at VCC File: /guest/quartus_assigns/Adder/TopModule.v Line: 9
+    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: /guest/quartus_assigns/Adder/TopModule.v Line: 10
+    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: /guest/quartus_assigns/Adder/TopModule.v Line: 10
+    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: /guest/quartus_assigns/Adder/TopModule.v Line: 10
+    Warning (13410): Pin "HEX4[3]" is stuck at VCC File: /guest/quartus_assigns/Adder/TopModule.v Line: 10
+    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: /guest/quartus_assigns/Adder/TopModule.v Line: 10
+    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: /guest/quartus_assigns/Adder/TopModule.v Line: 10
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: /guest/quartus_assigns/Adder/TopModule.v Line: 10
+    Warning (13410): Pin "HEX4[7]" is stuck at VCC File: /guest/quartus_assigns/Adder/TopModule.v Line: 10
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: /guest/quartus_assigns/Adder/TopModule.v Line: 11
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: /guest/quartus_assigns/Adder/TopModule.v Line: 11
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: /guest/quartus_assigns/Adder/TopModule.v Line: 11
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: /guest/quartus_assigns/Adder/TopModule.v Line: 11
+    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: /guest/quartus_assigns/Adder/TopModule.v Line: 11
+    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: /guest/quartus_assigns/Adder/TopModule.v Line: 11
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: /guest/quartus_assigns/Adder/TopModule.v Line: 11
+    Warning (13410): Pin "HEX5[7]" is stuck at VCC File: /guest/quartus_assigns/Adder/TopModule.v Line: 11
+    Warning (13410): Pin "LED[8]" is stuck at GND File: /guest/quartus_assigns/Adder/TopModule.v Line: 15
+    Warning (13410): Pin "LED[9]" is stuck at GND File: /guest/quartus_assigns/Adder/TopModule.v Line: 15
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 13 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLK2" File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 4
-    Warning (15610): No output dependent on input pin "BTN[0]" File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 13
-    Warning (15610): No output dependent on input pin "BTN[1]" File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 13
-    Warning (15610): No output dependent on input pin "SW[0]" File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 19
-    Warning (15610): No output dependent on input pin "SW[1]" File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 19
-    Warning (15610): No output dependent on input pin "SW[2]" File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 19
-    Warning (15610): No output dependent on input pin "SW[3]" File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 19
-    Warning (15610): No output dependent on input pin "SW[4]" File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 19
-    Warning (15610): No output dependent on input pin "SW[5]" File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 19
-    Warning (15610): No output dependent on input pin "SW[6]" File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 19
-    Warning (15610): No output dependent on input pin "SW[7]" File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 19
-    Warning (15610): No output dependent on input pin "SW[8]" File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 19
-    Warning (15610): No output dependent on input pin "SW[9]" File: /guest/ダウンロード/L11_Timer/TopModule.v Line: 19
-Info (21057): Implemented 126 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 6 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLK1" File: /guest/quartus_assigns/Adder/TopModule.v Line: 3
+    Warning (15610): No output dependent on input pin "CLK2" File: /guest/quartus_assigns/Adder/TopModule.v Line: 4
+    Warning (15610): No output dependent on input pin "BTN[0]" File: /guest/quartus_assigns/Adder/TopModule.v Line: 13
+    Warning (15610): No output dependent on input pin "BTN[1]" File: /guest/quartus_assigns/Adder/TopModule.v Line: 13
+    Warning (15610): No output dependent on input pin "SW[8]" File: /guest/quartus_assigns/Adder/TopModule.v Line: 19
+    Warning (15610): No output dependent on input pin "SW[9]" File: /guest/quartus_assigns/Adder/TopModule.v Line: 19
+Info (21057): Implemented 98 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 58 output pins
-    Info (21061): Implemented 54 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 66 warnings
-    Info: Peak virtual memory: 413 megabytes
-    Info: Processing ended: Wed Dec  8 10:26:54 2021
+    Info (21061): Implemented 26 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
+    Info: Peak virtual memory: 420 megabytes
+    Info: Processing ended: Mon Dec 20 10:07:28 2021
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Total CPU time (on all processors): 00:00:15
 
 

@@ -1,5 +1,5 @@
 Flow report for TopModule
-Wed Dec  8 10:27:20 2021
+Mon Dec 20 10:07:43 2021
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -41,17 +41,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Dec  8 10:27:14 2021       ;
+; Flow Status                        ; Successful - Mon Dec 20 10:07:40 2021       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; TopModule                                   ;
 ; Top-level Entity Name              ; TopModule                                   ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 55 / 49,760 ( < 1 % )                       ;
-;     Total combinational functions  ; 55 / 49,760 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 28 / 49,760 ( < 1 % )                       ;
-; Total registers                    ; 28                                          ;
+; Total logic elements               ; 27 / 49,760 ( < 1 % )                       ;
+;     Total combinational functions  ; 27 / 49,760 ( < 1 % )                       ;
+;     Dedicated logic registers      ; 0 / 49,760 ( 0 % )                          ;
+; Total registers                    ; 0                                           ;
 ; Total pins                         ; 72 / 360 ( 20 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/08/2021 10:26:44 ;
+; Start date & time ; 12/20/2021 10:07:18 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; TopModule           ;
 +-------------------+---------------------+
@@ -78,12 +78,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 118933446805316.163892680426323        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 118933446805570.163996243804256        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
@@ -93,11 +95,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 403 MB              ; 00:00:16                           ;
-; Fitter               ; 00:00:13     ; 1.0                     ; 891 MB              ; 00:00:15                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 395 MB              ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.0                     ; 529 MB              ; 00:00:04                           ;
-; Total                ; 00:00:29     ; --                      ; --                  ; 00:00:38                           ;
+; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 406 MB              ; 00:00:15                           ;
+; Fitter               ; 00:00:08     ; 1.0                     ; 894 MB              ; 00:00:09                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 402 MB              ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 535 MB              ; 00:00:02                           ;
+; Total                ; 00:00:24     ; --                      ; --                  ; 00:00:29                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -106,20 +108,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+----------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
 +----------------------+------------------+----------------+------------+----------------+
-; Analysis & Synthesis ; joko19           ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
-; Fitter               ; joko19           ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
-; Assembler            ; joko19           ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
-; Timing Analyzer      ; joko19           ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
+; Analysis & Synthesis ; joko18           ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
+; Fitter               ; joko18           ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
+; Assembler            ; joko18           ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
+; Timing Analyzer      ; joko18           ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
 +----------------------+------------------+----------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off L11_Timer -c TopModule
-quartus_fit --read_settings_files=off --write_settings_files=off L11_Timer -c TopModule
-quartus_asm --read_settings_files=off --write_settings_files=off L11_Timer -c TopModule
-quartus_sta L11_Timer -c TopModule
+quartus_map --read_settings_files=on --write_settings_files=off Adder -c TopModule
+quartus_fit --read_settings_files=off --write_settings_files=off Adder -c TopModule
+quartus_asm --read_settings_files=off --write_settings_files=off Adder -c TopModule
+quartus_sta Adder -c TopModule
 
 
 
