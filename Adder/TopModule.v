@@ -24,7 +24,7 @@ module TopModule(
 	assign in1 = SW[7:4];
 	assign in2 = SW[3:0];
 
-	m_adder a1(in1, in2, result);
+	assign result = in1 + in2;
 
 	wire [7:0] in1_7seg;
 	wire [7:0] in2_7seg;
@@ -35,7 +35,7 @@ module TopModule(
 	m_seven_segment ss2(in2, in2_7seg);
 	m_seven_segment ss3({3'b0, result[4]}, result1_7seg);
 	m_seven_segment ss4(result[3:0], result2_7seg);
-	
+
 	assign LED[7:4] = in1;
 	assign LED[3:0] = in2;
 	assign HEX0 = result2_7seg;
@@ -44,5 +44,5 @@ module TopModule(
 	assign HEX3 = in1_7seg;
 	assign HEX4 = 8'hff;
 	assign HEX5 = 8'hff;
-	
+
 endmodule
